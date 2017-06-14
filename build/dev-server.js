@@ -19,7 +19,7 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
 var proxyTable = config.dev.proxyTable
-
+// express开启一个框架
 var app = express()
 // 数据mock
 var appData=require('../data.json');
@@ -49,7 +49,6 @@ apiRouts.get('/ratings', function (req,res) {
   })
   // body...
 })
-
 
 app.use('/api',apiRouts);
 
